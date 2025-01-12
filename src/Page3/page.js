@@ -25,7 +25,7 @@ function Page() {
       </div>
       <div className={`page3-container`}>
         <div>
-          <CustomNotificationButton width={80} height={60} title="Page 2" />
+          <CustomNotificationButton width={80} height={60} title="Home" />
         </div>
         <div>
           Real Time BTC : {btcPrice}

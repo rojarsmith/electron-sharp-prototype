@@ -32,7 +32,7 @@
 
 .title {
     position: absolute;
-    top: 15px;
+    top: 13px;
     left: 60px;
     font-size: 16px;
     font-weight: bold;
@@ -40,7 +40,7 @@
 
 .arrow {
     position: absolute;
-    top: 12px;
+    top: 4px;
     left: 164px;
     font-size: 26px;
 }

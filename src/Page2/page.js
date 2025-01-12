@@ -20,6 +20,7 @@ function Page() {
   const [data3, setData3] = useState("30.0kw");
   const [data4, setData4] = useState("40.0kw");
   const [isDecoration, setIsDecoration] = useState("decoration");
+  const [isDr, setIsDr] = useState(true);
   const [btcPrice, setBtcPrice] = useState("Fetching...");
   const [inputValue, setInputValue] = useState("Page 2 is OK");
 
@@ -48,6 +49,7 @@ function Page() {
     }, 1000);
 
     const interval3 = setInterval(() => {
+      setIsDr((prev) => !prev);
       window.be_api.sendEvent("custom-event", inputValue);
     }, 3000);
 
@@ -104,7 +106,7 @@ function Page() {
               icon={Icon03}
               title="蓄電池"
               status1="放電中"
-              status2="DR"
+              status2={isDr ? 'DR' : ''}
               data={data1}
               percentage={percentage1}
             />
