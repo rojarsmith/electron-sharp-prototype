@@ -18,6 +18,7 @@ function Page() {
   const [data2, setData2] = useState("20.0kw");
   const [data3, setData3] = useState("30.0kw");
   const [data4, setData4] = useState("40.0kw");
+  const [isDecoration, setIsDecoration] = useState("decoration");
   const [btcPrice, setBtcPrice] = useState("Fetching...");
   const [inputValue, setInputValue] = useState("Page 2 is OK");
 
@@ -31,6 +32,7 @@ function Page() {
       setPercentage3(randomPercentage3);
       const randomPercentage4 = Math.floor(Math.random() * 100) + 1;
       setPercentage4(randomPercentage4);
+      setIsDecoration((prev) => !prev);
     }, 2000);
 
     const interval2 = setInterval(() => {
@@ -77,7 +79,11 @@ function Page() {
             <CustomNotificationButton width={50} height={50} icon={Icon11} />
           </div>
           <div style={{ display: "flex", justifyContent: "center", marginLeft: "10px", marginTop: "10px", marginRight: "10px" }}>
-            <CustomNotificationButton width={50} height={50} title="C" decoration />
+            {isDecoration ?
+              <CustomNotificationButton width={50} height={50} title="C" decoration />
+              :
+              <CustomNotificationButton width={50} height={50} title="C" />
+            }
           </div>
         </div>
       </div>
