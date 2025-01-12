@@ -16,6 +16,8 @@ function Page() {
   const [data2, setData2] = useState("20.0kw");
   const [data3, setData3] = useState("30.0kw");
   const [data4, setData4] = useState("40.0kw");
+  const [btcPrice, setBtcPrice] = useState("Fetching...");
+  const [inputValue, setInputValue] = useState("Page 2 is OK");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -40,9 +42,21 @@ function Page() {
       setData4(`${randomData4}kw`);
     }, 1000);
 
+    const interval3 = setInterval(() => {
+      window.be_api.sendEvent("custom-event", inputValue);
+    }, 3000);
+
+    const updatePriceHandler = (event, price) => {
+      setBtcPrice(price);
+    };
+
+    window.be_api.onUpdatePrice(updatePriceHandler);
+
     return () => {
       clearInterval(interval);
       clearInterval(interval2);
+      clearInterval(interval3);
+      window.be_api.onUpdatePrice(() => { });
     };
   }, []);
 
@@ -87,6 +101,11 @@ function Page() {
             <div class="icon-container">
               <img src={Home} alt="Home Icon" class="house-icon" />
               <div class="consumption-text">自家消費率</div>
+              <div style={{ textAlign: "center", marginTop: "20px" }}>
+                <span>Bitcoin Price</span>
+                <br />
+                <span>{btcPrice} USD</span>
+              </div>
               <div class="breathing-light"></div>
             </div>
           </div>
