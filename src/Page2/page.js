@@ -80,7 +80,13 @@ function Page() {
             <CustomNotificationButton width={100} height={50} title="A" />
           </div>
           <div style={{ display: "flex", justifyContent: "center", marginLeft: "10px", marginTop: "10px", marginRight: "10px" }}>
-            <CustomNotificationButton width={50} height={50} icon={Icon11} />
+            <CustomNotificationButton width={50} height={50} icon={Icon11} popup>
+              <div>
+                <h2>ポップアップ タイトル</h2>
+                <p>あなたの成功は私たちの成功です。</p>
+                <p>Rojar Smith @2025</p>
+              </div>
+            </CustomNotificationButton>
           </div>
           <div style={{ display: "flex", justifyContent: "center", marginLeft: "10px", marginTop: "10px", marginRight: "10px" }}>
             {isDecoration ?
