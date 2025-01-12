@@ -8,6 +8,7 @@ import Icon11 from "./icon11.png";
 import CustomButton from "./CustomButton";
 import Indicator from "./Indicator";
 import CustomNotificationButton from "../Page3/CustomNotificationButton";
+import FpsComponent from "../FpsComponent";
 
 function Page() {
   const [percentage1, setPercentage1] = useState(10);
@@ -66,6 +67,9 @@ function Page() {
 
   return (
     <div className={`page2-container`}>
+      <div >
+        <FpsComponent />
+      </div>
       <div class="row row-1">
         <div class="column column-1">
           <div><TimeDisplay /></div>
