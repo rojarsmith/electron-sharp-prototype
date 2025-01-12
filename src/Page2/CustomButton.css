@@ -1,0 +1,110 @@
+.custom-button {
+    position: relative;
+    width: 200px;
+    height: 130px;
+    background-color: #38a69b;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: white;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.custom-button:active {
+    background-color: #2d8578;
+    transform: scale(0.97);
+}
+
+.icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+.icon-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.title {
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.arrow {
+    position: absolute;
+    top: 12px;
+    left: 164px;
+    font-size: 26px;
+}
+
+.status-container {
+    position: absolute;
+    top: 55px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.status {
+    background-color: #ffffff33;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.data {
+    position: absolute;
+    top: 86px;
+    bottom: 20px;
+    left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.circle {
+    position: absolute;
+    bottom: 28px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.arc-svg {
+    width: 40px;
+    height: 40px;
+    transform: rotate(-90deg);
+}
+
+.background-circle {
+    fill: none;
+    stroke: #ffffff33;
+    stroke-width: 3;
+}
+
+.arc {
+    fill: none;
+    stroke: white;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 100 100;
+    transition: stroke-dasharray 0.3s ease;
+}
+
+.percentage-text {
+    position: absolute;
+    top: 45px;
+    left: 43%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
