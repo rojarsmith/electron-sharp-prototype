@@ -102,6 +102,8 @@ function Page() {
               <img src={Home} alt="Home Icon" class="house-icon" />
               <div class="consumption-text">自家消費率</div>
               <div style={{ textAlign: "center", marginTop: "20px" }}>
+                <span>インスタント<br />メッセージ</span>
+                <br />
                 <span>Bitcoin Price</span>
                 <br />
                 <span>{btcPrice} USD</span>
@@ -131,8 +133,8 @@ function Page() {
       </div>
       <Indicator top={180} left={245} direction="row" circles={3} backgroundColor="#38a69b" />
       <Indicator top={280} left={245} direction="row" circles={3} backgroundColor="#ff6b6b" />
-      <Indicator top={180} left={463} direction="row" circles={3} backgroundColor="#38a69b" />
-      <Indicator top={280} left={463} direction="row" circles={3} backgroundColor="#38a69b" />
+      <Indicator top={180} left={490} direction="row" circles={3} backgroundColor="#38a69b" />
+      <Indicator top={280} left={490} direction="row" circles={3} backgroundColor="#38a69b" />
     </div>
   );
 }

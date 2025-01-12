@@ -13,7 +13,7 @@
 
 .custom-button:active {
     background-color: #2d8578;
-    transform: scale(0.97);
+    transform: scale(1.05);
 }
 
 .icon {

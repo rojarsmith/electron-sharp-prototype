@@ -161,7 +161,7 @@
 
 .breathing-light {
   position: absolute;
-  top: -5%;
+  top: -14%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 120px;
@@ -193,4 +193,14 @@
   color: white;
   text-align: center;
   z-index: 2;
+}
+
+.page3-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
 }
