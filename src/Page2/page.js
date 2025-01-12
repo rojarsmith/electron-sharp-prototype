@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import '../App.css';
 import Home from './home.png'
 import TimeDisplay from "./TimeDisplay";
@@ -7,6 +8,44 @@ import CustomButton from "./CustomButton";
 import Indicator from "./Indicator";
 
 function Page() {
+  const [percentage1, setPercentage1] = useState(10);
+  const [percentage2, setPercentage2] = useState(20);
+  const [percentage3, setPercentage3] = useState(30);
+  const [percentage4, setPercentage4] = useState(40);
+  const [data1, setData1] = useState("10.0kw");
+  const [data2, setData2] = useState("20.0kw");
+  const [data3, setData3] = useState("30.0kw");
+  const [data4, setData4] = useState("40.0kw");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const randomPercentage = Math.floor(Math.random() * 100) + 1;
+      setPercentage1(randomPercentage);
+      const randomPercentage2 = Math.floor(Math.random() * 100) + 1;
+      setPercentage2(randomPercentage2);
+      const randomPercentage3 = Math.floor(Math.random() * 100) + 1;
+      setPercentage3(randomPercentage3);
+      const randomPercentage4 = Math.floor(Math.random() * 100) + 1;
+      setPercentage4(randomPercentage4);
+    }, 2000);
+
+    const interval2 = setInterval(() => {
+      const randomData1 = (Math.random() * 99 + 1).toFixed(1);
+      setData1(`${randomData1}kw`);
+      const randomData2 = (Math.random() * 99 + 1).toFixed(1);
+      setData2(`${randomData2}kw`);
+      const randomData3 = (Math.random() * 99 + 1).toFixed(1);
+      setData3(`${randomData3}kw`);
+      const randomData4 = (Math.random() * 99 + 1).toFixed(1);
+      setData4(`${randomData4}kw`);
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+      clearInterval(interval2);
+    };
+  }, []);
+
   return (
     <div className={`page2-container`}>
       <div class="row row-1">
@@ -28,8 +67,8 @@ function Page() {
               title="蓄電池"
               status1="放電中"
               status2="DR"
-              data="5.5kw"
-              percentage={80}
+              data={data1}
+              percentage={percentage1}
             />
           </div>
           <div style={{ display: "flex", justifyContent: "center", marginLeft: "50px", marginTop: "20px", marginRight: "70px" }}>
@@ -38,8 +77,8 @@ function Page() {
               title="外部発電"
               status1="放電中"
               backgroundColor="#ff6b6b"
-              data="1.2kw"
-              percentage={20}
+              data={data2}
+              percentage={percentage2}
             />
           </div>
         </div>
@@ -57,16 +96,16 @@ function Page() {
             <CustomButton
               icon={Icon02}
               title="蓄電池"
-              data="10.0kw"
-              percentage={30}
+              data={data3}
+              percentage={percentage3}
             />
           </div>
           <div style={{ display: "flex", justifyContent: "center", marginLeft: "70px", marginTop: "20px", marginRight: "50px" }}>
             <CustomButton
               icon={Icon02}
               title="外部発電"
-              data="20.5kw"
-              percentage={10}
+              data={data4}
+              percentage={percentage4}
             />
           </div>
         </div>
