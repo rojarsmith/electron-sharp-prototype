@@ -4,8 +4,10 @@ import Home from './home.png'
 import TimeDisplay from "./TimeDisplay";
 import Icon02 from "./icon02.png";
 import Icon03 from "./icon03.png";
+import Icon11 from "./icon11.png";
 import CustomButton from "./CustomButton";
 import Indicator from "./Indicator";
+import CustomNotificationButton from "../Page3/CustomNotificationButton";
 
 function Page() {
   const [percentage1, setPercentage1] = useState(10);
@@ -68,9 +70,15 @@ function Page() {
           <div>ネットワーク通信あり</div>
         </div>
         <div class="column column-2">
-          <div>Item A</div>
-          <div>Item B</div>
-          <div>Item C</div>
+          <div style={{ display: "flex", justifyContent: "center", marginLeft: "10px", marginTop: "10px", marginRight: "10px" }}>
+            <CustomNotificationButton width={100} height={50} title="A" />
+          </div>
+          <div style={{ display: "flex", justifyContent: "center", marginLeft: "10px", marginTop: "10px", marginRight: "10px" }}>
+            <CustomNotificationButton width={50} height={50} icon={Icon11} />
+          </div>
+          <div style={{ display: "flex", justifyContent: "center", marginLeft: "10px", marginTop: "10px", marginRight: "10px" }}>
+            <CustomNotificationButton width={50} height={50} title="C" decoration />
+          </div>
         </div>
       </div>
       <div class="row row-2">
