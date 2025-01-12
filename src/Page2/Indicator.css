@@ -1,0 +1,13 @@
+.indicator {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    z-index: 1;
+}
+
+.indicator-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #38a69b;
+}

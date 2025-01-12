@@ -4,6 +4,7 @@ import TimeDisplay from "./TimeDisplay";
 import Icon02 from "./icon02.png";
 import Icon03 from "./icon03.png";
 import CustomButton from "./CustomButton";
+import Indicator from "./Indicator";
 
 function Page() {
   return (
@@ -37,6 +38,8 @@ function Page() {
               title="外部発電"
               status1="放電中"
               backgroundColor="#ff6b6b"
+              data="1.2kw"
+              percentage={20}
             />
           </div>
         </div>
@@ -54,16 +57,24 @@ function Page() {
             <CustomButton
               icon={Icon02}
               title="蓄電池"
+              data="10.0kw"
+              percentage={30}
             />
           </div>
           <div style={{ display: "flex", justifyContent: "center", marginLeft: "70px", marginTop: "20px", marginRight: "50px" }}>
             <CustomButton
               icon={Icon02}
               title="外部発電"
+              data="20.5kw"
+              percentage={10}
             />
           </div>
         </div>
       </div>
+      <Indicator top={180} left={245} direction="row" circles={3} backgroundColor="#38a69b" />
+      <Indicator top={280} left={245} direction="row" circles={3} backgroundColor="#ff6b6b" />
+      <Indicator top={180} left={463} direction="row" circles={3} backgroundColor="#38a69b" />
+      <Indicator top={280} left={463} direction="row" circles={3} backgroundColor="#38a69b" />
     </div>
   );
 }
