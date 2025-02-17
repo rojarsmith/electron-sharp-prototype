@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./CustomButton.css";
 
-const CustomButton = ({ icon, title, status1, status2, data, percentage, backgroundColor }) => {
+const CustomButton = ({ icon, title, status1, status2, data, percentage, backgroundColor, nav }) => {
     const [isPressed, setIsPressed] = useState(false);
     const navigate = useNavigate();
 
@@ -16,7 +16,7 @@ const CustomButton = ({ icon, title, status1, status2, data, percentage, backgro
 
     const handleMouseUp = () => {
         setIsPressed(false);
-        navigate("/page3");
+        navigate(nav);
     };
 
     return (

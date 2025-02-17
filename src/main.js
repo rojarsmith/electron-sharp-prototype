@@ -21,9 +21,9 @@ function createWindow() {
 
     backengine.setupIpcHandlers(ipcMain, win);
 
-    ipcMain.on("custom-event", (event, data) => {
-        console.log("Received event in main process:", data);
-    });
+    // ipcMain.on("custom-event", (event, data) => {
+    //     console.log("Received event in main process:", data);
+    // });
 }
 
 app.whenReady().then(createWindow)

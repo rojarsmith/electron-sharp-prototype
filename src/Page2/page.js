@@ -109,6 +109,7 @@ function Page() {
               status2={isDr ? 'DR' : ''}
               data={data1}
               percentage={percentage1}
+              nav="/page3"
             />
           </div>
           <div style={{ display: "flex", justifyContent: "center", marginLeft: "50px", marginTop: "20px", marginRight: "70px" }}>
@@ -119,6 +120,7 @@ function Page() {
               backgroundColor="#ff6b6b"
               data={data2}
               percentage={percentage2}
+              nav="/page4"
             />
           </div>
         </div>
@@ -145,6 +147,7 @@ function Page() {
               title="蓄電池"
               data={data3}
               percentage={percentage3}
+              nav="/page3"
             />
           </div>
           <div style={{ display: "flex", justifyContent: "center", marginLeft: "70px", marginTop: "20px", marginRight: "50px" }}>
@@ -153,6 +156,7 @@ function Page() {
               title="外部発電"
               data={data4}
               percentage={percentage4}
+              nav="/page3"
             />
           </div>
         </div>
